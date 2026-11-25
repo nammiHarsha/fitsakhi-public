@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy | FitSakhi</title>
+<meta name="description" content="How the FitSakhi experimental prototype handles data, including its use of Meta's WhatsApp Cloud API.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="banner" role="note"><strong>FitSakhi is an experimental prototype in controlled developer testing.</strong> It is not available to the public.</div>
+<header><p class="brand">FitSakhi</p><nav aria-label="Main"><a href="index.html">Home</a><a href="privacy.html" aria-current="page">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="data-deletion.html">Data Deletion</a><a href="contact.html">Contact</a></nav></header>
+<main id="main">
+
+<h1>Privacy Policy</h1>
+<p class="meta">Last updated 25 November 2026</p>
+<div class="callout"><p><strong>In short:</strong> FitSakhi is an experimental prototype. Use <strong>made-up information only</strong>. Data is kept in a local file on the developer's computer, which has no login and is <strong>not encrypted</strong> by the application. Messages travel through Meta's WhatsApp Business Platform. You can ask for deletion at any time (<a href="data-deletion.html">how</a>). This is a plain-language notice for a developer test, not legal advice, and it has not been reviewed by a lawyer.</p></div>
+
+<h2>1. Who is responsible</h2>
+<p>FitSakhi is operated by an individual developer. Contact: <a href="mailto:189x1a0398@gprec.ac.in">189x1a0398@gprec.ac.in</a>.</p>
+
+<h2>2. What FitSakhi is, and what is not built</h2>
+<p><strong>Today (developer prototype):</strong> a private application on the developer's computer that records a short profile and preferences, builds simple rule-based daily plans from an unreviewed development food list, schedules reminders, records yes / no / later replies, calculates a basic daily consistency score, and exchanges WhatsApp messages with one approved test recipient through Meta's developer test number. At present only the developer uses it.</p>
+<p><strong>Only proposed, not built:</strong> public sign-up and login, a production WhatsApp number, encryption of stored data, independent security review, clinician or dietitian review, and photo check-ins. This policy describes only what exists today and will be updated before any of these are built or before other people are invited.</p>
+
+<h2>3. Do not submit real health information</h2>
+<p>Please give <strong>made-up information only</strong>, including any condition, medication, allergy or glucose value the prototype asks about. The prototype has no login, does not encrypt its stored data, and is not designed to protect real health records. WhatsApp's rules also restrict health information (see section 5). If you think you shared real health information, email <a href="mailto:189x1a0398@gprec.ac.in">189x1a0398@gprec.ac.in</a> and we will prioritise removing it.</p>
+
+<h2>4. Data the prototype handles</h2>
+<div class="scroll"><table>
+<thead><tr><th>Data</th><th>Examples</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td>Profile</td><td>A made-up name, age, height, weight, language, time zone, goals</td><td>To personalise reminders and rules</td></tr>
+<tr><td>Health-related answers (made-up only)</td><td>Conditions, medications, restrictions, an optional glucose value, food allergies</td><td>To test the prototype's safety rules</td></tr>
+<tr><td>Food and routine</td><td>Diet type, dislikes, wake, sleep and meal times, reminder choices</td><td>To build plans and time reminders</td></tr>
+<tr><td>Plans, tasks and replies</td><td>Daily tasks, yes / no / later replies, a consistency score</td><td>To run the accountability features</td></tr>
+<tr><td>Consent records</td><td>What was agreed to, and any change of mind</td><td>To respect choices</td></tr>
+<tr><td>WhatsApp contact</td><td>The phone number of the approved test recipient</td><td>To send reminders and match replies</td></tr>
+<tr><td>Technical records</td><td>Message identifiers, delivery statuses, internal event keys, audit entries (no message text, no phone numbers)</td><td>To avoid duplicates and troubleshoot</td></tr>
+</tbody></table></div>
+<p>The prototype does not collect location, contacts, photos, payment details or advertising identifiers. Photo check-ins are not implemented.</p>
+<p><strong>Where it is stored:</strong> in a database file on the developer's own computer, not on a cloud service run by us. Manual test copies of that file may be kept on the same computer.</p>
+
+<h2>5. WhatsApp and Meta</h2>
+<ul>
+<li>Messages are sent and received through <strong>Meta's WhatsApp Business Platform (Cloud API)</strong>, using Meta's developer test number and one approved test recipient.</li>
+<li>An outgoing reminder currently contains only a short task title and a time (for example "Breakfast (08:00)") with reply buttons. We receive replies (button taps and the word STOP) and delivery updates through a webhook; each request is checked against Meta's signature before it is processed.</li>
+<li>To deliver messages, the recipient's phone number and the message content and details are processed by <strong>Meta</strong> under its own terms and privacy policy. We do not control Meta's handling, retention or where it processes data.</li>
+<li>Meta's terms state that the WhatsApp Business Platform is not HIPAA compliant, and WhatsApp's Business Messaging Policy restricts using WhatsApp to send or request health related information. This is why real health information must not be used.</li>
+<li>Reply <strong>STOP</strong> at any time to pause reminders.</li>
+</ul>
+<p>Meta's own policies: <a href="https://www.whatsapp.com/legal/privacy-policy">WhatsApp Privacy Policy</a>, <a href="https://www.facebook.com/privacy/policy/">Meta Privacy Policy</a>, <a href="https://business.whatsapp.com/policy">WhatsApp Business Messaging Policy</a>.</p>
+
+<h2>6. Sharing, advertising, analytics and AI</h2>
+<ul>
+<li>We do not sell data and show no advertising.</li>
+<li>Data is shared only with Meta, as described above, and where we are legally required to.</li>
+<li>FitSakhi uses no generative AI and sends no data to any external AI service.</li>
+<li>This website is static and uses no cookies, scripts, analytics or trackers, and has no forms. Its hosting provider (GitHub Pages) may keep standard server logs, such as IP addresses, under its own privacy statement; we do not receive them.</li>
+</ul>
+
+<h2>7. Your choices</h2>
+<p>Taking part is voluntary. You can ask what data we hold about you, ask us to correct it, ask us to delete it, or withdraw your consent, by emailing <a href="mailto:189x1a0398@gprec.ac.in">189x1a0398@gprec.ac.in</a>. Deletion is explained on the <a href="data-deletion.html">Data Deletion Instructions</a> page. Privacy complaints can be sent to the same address.</p>
+
+<h2>8. How long data is kept</h2>
+<p>Test data is kept until you ask us to delete it or until developer testing ends, whichever comes first. When testing ends, the test data is deleted. Manual archived copies of the test database are deleted on the same terms.</p>
+
+<h2>9. Security: what exists and what does not</h2>
+<p><strong>What exists:</strong> the prototype runs on the developer's own computer and its services listen only on that computer, except for a short-lived connection used while testing Meta's webhook; webhook requests from Meta are signature-checked; access credentials are kept in memory or the developer's private environment and are not stored in the database; messages are limited to an approved test recipient.</p>
+<p><strong>What does not exist:</strong> the application does <strong>not</strong> encrypt its stored data, has no user login, and has had no independent security review. We make no guarantee of security. For this reason real health information must not be submitted.</p>
+
+<h2>10. Adults only</h2>
+<p>The prototype is for adults aged 18 or over. It must not be used by or for children.</p>
+
+<h2>11. Changes</h2>
+<p>This policy will be updated, and its date changed, before any proposed feature is built or before other people are invited to use the prototype.</p>
+
+<h2>12. Contact</h2>
+<p><a href="mailto:189x1a0398@gprec.ac.in">189x1a0398@gprec.ac.in</a></p>
+
+</main>
+<footer>
+<p>FitSakhi is an independent experiment, not affiliated with, endorsed by or sponsored by Meta Platforms, Inc. or WhatsApp. WhatsApp and Meta are trademarks of their respective owners.</p>
+<p>This website is static: no forms, cookies, scripts, analytics or trackers. Last updated 25 November 2026.</p>
+</footer>
+</body>
+</html>
