@@ -21,7 +21,7 @@
 <p>FitSakhi is operated by an individual developer. Contact: <a href="mailto:189x1a0398@gprec.ac.in">189x1a0398@gprec.ac.in</a>.</p>
 
 <h2>2. What FitSakhi is, and what is not built</h2>
-<p><strong>Today (developer prototype):</strong> a private application on the developer's computer that records a short profile and preferences, builds simple rule-based daily plans from an unreviewed development food list, schedules reminders, records yes / no / later replies, calculates a basic daily consistency score, and exchanges WhatsApp messages with one approved test recipient through Meta's developer test number. At present only the developer uses it.</p>
+<p><strong>Today (developer prototype):</strong> a private application on the developer's computer that records a short profile and preferences, builds simple rule-based daily plans from an unreviewed development food list, schedules reminders, records yes / no / later replies, calculates a basic daily consistency score, sends WhatsApp messages to one approved test recipient through Meta's developer test number, and is designed to receive that person's replies during testing sessions. At present only the developer uses it.</p>
 <p><strong>Only proposed, not built:</strong> public sign-up and login, a production WhatsApp number, encryption of stored data, independent security review, clinician or dietitian review, and photo check-ins. This policy describes only what exists today and will be updated before any of these are built or before other people are invited.</p>
 
 <h2>3. Do not submit real health information</h2>
@@ -45,17 +45,19 @@
 <h2>5. WhatsApp and Meta</h2>
 <ul>
 <li>Messages are sent and received through <strong>Meta's WhatsApp Business Platform (Cloud API)</strong>, using Meta's developer test number and one approved test recipient.</li>
-<li>An outgoing reminder currently contains only a short task title and a time (for example "Breakfast (08:00)") with reply buttons. We receive replies (button taps and the word STOP) and delivery updates through a webhook; each request is checked against Meta's signature before it is processed.</li>
+<li>An outgoing reminder currently contains only a short task title and a time (for example "Breakfast (08:00)") with reply buttons.</li>
+<li>Replies and delivery updates come back through a <strong>webhook that runs only during short testing sessions</strong> on the developer's computer. While it runs, any message you send to the test number reaches it; only button taps and the words STOP or PAUSE are acted on, and other message text is ignored and not stored. Each request is checked against Meta's signature before it is processed.</li>
+<li>During those sessions Meta's webhook traffic reaches the developer's computer through a temporary tunnel run by <strong>Cloudflare, Inc.</strong> (a Cloudflare Quick Tunnel). That traffic, which can include the recipient's phone number and message content, therefore passes through Cloudflare's network under Cloudflare's own terms. The tunnel is stopped when the session ends.</li>
 <li>To deliver messages, the recipient's phone number and the message content and details are processed by <strong>Meta</strong> under its own terms and privacy policy. We do not control Meta's handling, retention or where it processes data.</li>
 <li>Meta's terms state that the WhatsApp Business Platform is not HIPAA compliant, and WhatsApp's Business Messaging Policy restricts using WhatsApp to send or request health related information. This is why real health information must not be used.</li>
-<li>Reply <strong>STOP</strong> at any time to pause reminders.</li>
+<li>Replying <strong>STOP</strong> is designed to pause reminders, but because the webhook runs only during testing sessions it may not be processed straight away. To stop messages reliably, email us.</li>
 </ul>
 <p>Meta's own policies: <a href="https://www.whatsapp.com/legal/privacy-policy">WhatsApp Privacy Policy</a>, <a href="https://www.facebook.com/privacy/policy/">Meta Privacy Policy</a>, <a href="https://business.whatsapp.com/policy">WhatsApp Business Messaging Policy</a>.</p>
 
 <h2>6. Sharing, advertising, analytics and AI</h2>
 <ul>
 <li>We do not sell data and show no advertising.</li>
-<li>Data is shared only with Meta, as described above, and where we are legally required to.</li>
+<li>Data is shared only with Meta and, for the temporary testing tunnel, Cloudflare, as described above, and where we are legally required to.</li>
 <li>FitSakhi uses no generative AI and sends no data to any external AI service.</li>
 <li>This website is static and uses no cookies, scripts, analytics or trackers, and has no forms. Its hosting provider (GitHub Pages) may keep standard server logs, such as IP addresses, under its own privacy statement; we do not receive them.</li>
 </ul>
@@ -67,7 +69,7 @@
 <p>Test data is kept until you ask us to delete it or until developer testing ends, whichever comes first. When testing ends, the test data is deleted. Manual archived copies of the test database are deleted on the same terms.</p>
 
 <h2>9. Security: what exists and what does not</h2>
-<p><strong>What exists:</strong> the prototype runs on the developer's own computer and its services listen only on that computer, except for a short-lived connection used while testing Meta's webhook; webhook requests from Meta are signature-checked; access credentials are kept in memory or the developer's private environment and are not stored in the database; messages are limited to an approved test recipient.</p>
+<p><strong>What exists:</strong> the prototype runs on the developer's own computer and its services listen only on that computer, except that during testing sessions the webhook is made reachable through a temporary Cloudflare tunnel; webhook requests from Meta are signature-checked; access credentials are kept in memory or the developer's private environment and are not stored in the database; messages are limited to an approved test recipient.</p>
 <p><strong>What does not exist:</strong> the application does <strong>not</strong> encrypt its stored data, has no user login, and has had no independent security review. We make no guarantee of security. For this reason real health information must not be submitted.</p>
 
 <h2>10. Adults only</h2>
